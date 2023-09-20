@@ -1,0 +1,14 @@
+# requirements
+torch==1.8.1
+ffmpeg
+kornia
+matplotlib
+pyyaml
+scipy
+tensorboard==2.4.1
+tensorboard-plugin-wit==1.8.0
+torchvision==0.9.1
+tqdm==4.60.0
+PyYAML
+lpips==0.1.3
+opencv-python==4.5.1.48
