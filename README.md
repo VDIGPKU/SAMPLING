@@ -3,4 +3,4 @@ The official code for SAMPLING: Scene-adaptive Hierarchical Multiplane Images Re
 
 
 ## License 
-The project is only free for academic research purposes, but needs authorization for commerce. For commerce permission, please contact [wyt@pku.edu.cn].
+The project is only free for academic research purposes, but needs authorization for commerce.
