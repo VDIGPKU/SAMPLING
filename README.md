@@ -1,4 +1,4 @@
-# SAMPLING
+# [SAMPLING](https://arxiv.org/abs/2309.06323)
 The official code for SAMPLING: Scene-adaptive Hierarchical Multiplane Images Representation for Novel View Synthesis from a Single Image (ICCV23)
 
 
