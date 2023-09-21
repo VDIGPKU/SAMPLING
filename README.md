@@ -2,7 +2,13 @@
 The official code for [SAMPLING: Scene-adaptive Hierarchical Multiplane Images Representation for Novel View Synthesis from a Single Image (ICCV23)](https://arxiv.org/abs/2309.06323).
 
 ## Overview
+Given a single image captured in an outdoor scene, our method synthesizes novel views with fewer visual artifacts, geometric deformities, and blurs. Notably, our method models favorable intricate details, such as tiny objects, symbols, and traffic signs, resulting in more photo-realistic views.
+![teaser](pic/teaser.svg)
+
 ## Performance
+Qualitative results
+
+Video results
 
 ## Quick Start
 ### Installation
