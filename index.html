@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-LWZJTCMLQ0"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LWZJTCMLQ0');
+</script><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-PY99WRQRT8"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PY99WRQRT8');
+</script><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SAMPLING: Scene-adaptive Hierarchical Multiplane Images Representation for Novel View Synthesis from a Single Image</title>
+	<link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet" />
+	<link href="web/offcanvas.css" rel="stylesheet" />
+</head>
+<body>
+<div class="jumbotron jumbotron-fluid">
+<div class="container">
+<h2>SAMPLING: Scene-adaptive Hierarchical Multiplane Images Representation for Novel View Synthesis from a Single Image</h2>
+
+<h3>ICCV 2023</h3> 
+<hr />
+<p class="authors">Xiaoyu Zhou<sup>1</sup>, Zhiwei Lin<sup>1</sup>, Xiaojun Shan<sup>1</sup>, Yongtao Wang<sup>1</sup>, Deqing Sun<sup>2</sup>, Ming-Hsuan Yang<sup>3</sup></p>
+
+<p class="author-affiliation"><sup>1</sup>Wangxuan Institute of Computer Technology, Peking Univerisity, <sup>2</sup> Google Research, <sup>3</sup>University of California, Merced</p>
+
+<div aria-label="Top menu" class="btn-group" role="group"><a class="btn btn-primary" href="https://arxiv.org/pdf/2309.06323.pdf">Paper</a></div>
+
+<!-- <div aria-label="Top menu" class="btn-group" role="group"><a class="btn btn-primary" href="materialistic_supplementary.pdf">Supplementary</a></div>-->
+<div aria-label="Top menu" class="btn-group" role="group"><a class="btn btn-primary" href="https://arxiv.org/pdf/2309.06323.pdf">Supplementary</a></div> 
+
+<div aria-label="Top menu" class="btn-group" role="group"><a class="btn btn-primary" href="https://github.com/PKUVDIG/SAMPLING">Code</a></div>
+
+</div>
+</div>
+
+<div class="container">
+<div class="section"><img src="web/teaser8.jpg" style="margin-bottom:2em;" width="100%" /> <!-- Add vertical space -->
+<p><b>Novel view synthesis result comparisons.</b> Given a single image captured in an outdoor scene, our method
+synthesizes novel views with fewer visual artifacts, geometric deformities, and blurs. Notably, our method models favorable
+intricate details, such as tiny objects, symbols, and traffic signs, resulting in more photo-realistic views.
+<h3>Abstract</h3>
+
+<p>Recent novel view synthesis methods obtain promising results for relatively small scenes, e.g., indoor environments and scenes with a few objects, but tend to fail for unbounded outdoor scenes with a single image as input. In this paper, we introduce SAMPLING, a Scene-adaptive Hierarchical Multiplane Images Representation for Novel View Synthesis from a Single Image based on improved multiplane images (MPI). Observing that depth distribution varies significantly for unbounded outdoor scenes, we employ an adaptive-bins strategy for MPI to arrange planes in accordance with each scene image. To represent intricate geometry and multi-scale details, we further introduce a hierarchical refinement branch, which results in high-quality synthesized novel views. Our method demonstrates considerable performance gains in synthesizing large-scale unbounded outdoor scenes using a single image on the KITTI dataset and generalizes well to the unseen Tanks and Temples dataset. The code and models will be made public.</p>
+</div>
+
+<hr /></div>
+
+<div class="container">
+<div class="section">
+<h3>Qualitative comparison of novel view synthesis on the KITTI dataset.</h3>
+<img src="web/compare.jpg" width="100%" />
+<p> Visualization results show our method generates better details compared to other single-view NVS methods.</p>
+
+
+<hr />
+<div class="section">
+<h3>Qualitative comparison of disparity map and novel view synthesis on the KITTI dataset.</h3>
+<img src="web/depth_comp3.png" width="100%" />
+<p>(a) Disparity maps in previous work exhibit structural biases and missing objects, leading to unpleasant artifacts and distortions in the output. (b) The comparative disparity maps show that our method is capable of better recovering the spatial structure of complex scenes and intricate object boundaries. (c) Our method consistently delivers higher-quality and flawlessly disparity maps and outputs, even in challenging regions.</p>
+
+
+<hr />
+
+
+<div class="section">
+	
+<h3>The qualitative results of our method generalize to unseen dataset (T&T).</h3>
+
+
+<img src="web/indoor4.png" width="100%" />
+<p>The symbol * denotes the model is trained on KITTI and evaluated on T&T.</p>
+
+<div class="section">
+<h3>Qualitative results on KITTI of outdoor scenes.</h3>
+<img src="web/outdoor-sup2.png" width="100%" />	
+
+<p>Each compared group <b>C</b> consists of two synthesized views of outdoor scenes in the KITTI dataset, with the novel views synthesized by MINE <b>(Top row)</b> and the images generated by our method <b>(Bottom row)</b> at the same viewpoint. We highlight the challenging areas and hard cases in these outdoor scenes.</p>
+
+
+<hr />
+<div class="section">
+<h3>Qualitative results on T&T of indoor scenes.</h3>
+<img src="web/indoor-sup.png" width="100%" />	
+<p>Each compared group <b>C</b> consists of two synthesized views of indoor scenes in the T&T dataset, with the novel views synthesized by MINE <b>(Top row)</b> and the images generated by our method <b>(Bottom row)</b> at the same viewpoint. Notably, both methods are trained on the KITTI dataset and are not fine-tuned on the indoor dataset.</p>
+</div>
+
+<!-- <hr />
+<div class="section">
+<h3>Results on grayscale images</h3>
+
+<p>We further evaluate our method on grayscale images and see that if textures are clearly distinct, our method can select the relevant regions despite the lack of color, showing it also considers texture to make its selection.</p>
+<img src="web/img/grayscale_results.png" width="100%" /></div>
+
+<hr />
+
+<div class="section row align-items-center">
+<h3>Selection consistency</h3>
+
+<p>The method produces consistent segmentation masks for different pixel selections within image regions that belong to the same material. In the query image, we show 5 different pixel selections (marked in different colors) with the resulting masks overlayed with the respective color.</p>
+<img src="web/img/consistency_fullwidth.png" width="100%" /></div>
+<hr />
+
+<div class="section row align-items-center">
+<h3>Robustness to lighting variation</h3>
+
+<p>Our method is robust to lighting variations including specularity and shadows. The first row shows all the input images. There is a query selected in the first image with a selection marked with a red square. The selected pixel is at the center of the red square. The query embedding at the selection at the red square is used to select materials in subsequent images. The results show the robustness of our method to different lighting scenarios.</p>
+<img src="web/img/lighting_analysis.png" width="100%" /></div>
+
+<div class="section row align-items-center">
+<p>We also present the same experiment to demonstrate the robustness of our method to different lighting scenarios using the Multi-Illumination Dataset by Murmann et al.</p>
+<img src="web/img/murmann_dataset_lighting_results.png" width="100%" /></div>
+
+<hr />
+<div class="section">
+<h3>Analysis: Albedo analysis</h3>
+
+<p>To analyze the behavior of the model with respect to changing albedo, we change the hue and saturation value on a diffuse sphere. The hue is sampled in range [0, 2*pi] and saturation is sampled in [0, 1]. We select the central pixel on a grid of spheres with varying albedo. The scores are thresholded at 0.5 which results in selections of regions in spheres with neighboring albedo. As expected, our model selects sphere with colors closer to the selected one first. As we vary the threshold, the selection becomes limited to the central sphere (higher threshold &gt; 0.9), or extends to further spheres (lower threshold).</p>
+<img src="web/img/albedo_analysis.png" width="100%" />
+<hr /></div>
+
+<div class="section">
+<h3>Analysis: Blending between materials</h3>
+
+<p>We now evaluate the sensitivity of our model to gradual material changes. To do so we render nine spheres covered by a blend of two different materials, a stone wall and roof tiles. We use the Blender &quot;shader mix&quot; node to interpolate between the SVBRDFs and apply a different mixing factor for each sphere, this mixing is shown below. Where 1.0 means 100% wall and 0.0 means 100% tiles.</p>
+
+<div class="text-center"><img src="web/img/test_checker_interop.png" width="50%" /></div>
+
+<p>We then proceed to select similar materials based on a query pixel on each extreme case. As we can see our method selects materials that are close to the query but not exactly similar and discriminates well when the mix of materials is visually far from the query.</p>
+<img src="web/img/brdf_blend.png" width="100%" />
+<hr /></div> -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script> <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script> <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script></div>
+</div>
+</body>
+</html>
