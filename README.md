@@ -12,6 +12,8 @@ Recent novel view synthesis methods obtain promising results for relatively smal
 ## Performance
 Qualitative results
 
+![results](web/outdoor-sup2.png)
+
 Video results
 
 ## Quick Start
