@@ -26,16 +26,13 @@ Download KITTI dataset images and labels, with data structure as below:
 ${ROOT}
   |-- data
   `-- |-- kitti
-      `-- |-- image
-          |   |-- training
-          |   |-- |-- image_00
-          |   |-- |-- |-- 0000
-          |   |-- |-- |-- ...
-          |-- |-- testing
-          |-- label
-          |   |-- 0000.txt
-          |   |-- ...
-          `-- calib
+      `-- |-- scene
+          `-- |-- images
+              |-- |-- image_00
+              |-- |-- |-- 0000
+              |-- |-- |-- ...
+              `-- calib
+              |-- |-- |-- ...
 ```
 ### Training
 ```
